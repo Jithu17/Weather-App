@@ -3,13 +3,13 @@
 ## The weather application is a react application using the open source metaweather API's
 
 ## The third party packages used:
-  ### axios --- to send http request
-  ### reactstrap --- for UI components
+  #### axios --- to send http request
+  #### reactstrap --- for UI components
 
 ## To start with:
-### clone this repository
-### -- npm install
-### -- npm start
+#### -- clone this repository
+#### -- npm install
+#### -- npm start
 
 ## How to use the Application
   #### Start typing the location name
@@ -20,5 +20,5 @@
 
 ## To run unit tests:
 
-### -- npm run test
+#### -- npm run test
 
