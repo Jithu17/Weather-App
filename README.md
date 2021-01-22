@@ -11,10 +11,10 @@
 ### -- npm start
 
 ## How to use the Application
-  Start typing the location name
-  Suggestion appears in the dropdown
-  Select one of the Location
-  The temperature details for the last 5 days will appear below
+  #### Start typing the location name
+  #### Suggestion appears in the dropdown
+  #### Select one of the Location
+  #### The temperature details for the last 5 days will appear below
 
 
 ## To run unit tests:
