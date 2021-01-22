@@ -8,8 +8,8 @@
 
 ## To start with:
 #### -- clone this repository
-#### -- npm install
-#### -- npm start
+#### -- yarn install
+#### -- yarn start
 
 ## How to use the Application
   #### Start typing the location name
