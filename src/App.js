@@ -1,22 +1,38 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import Forecast from './components/Forecast';
+import { Row, Container, Col } from "reactstrap";
 
 function App() {
+
+  const [selectedValue, setSelectedValue] = useState(null);
+
+   // handle selection
+  const handleSelected = value => {
+    setSelectedValue(value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Container>
+          <div className="headerApp"><h1>Weather App</h1></div>
+          <Row className="searchApp">
+            <Col xs={{size: 6, offset: 3}}>
+              <SearchBar 
+                handleSelected={handleSelected}
+              />
+            </Col>
+          </Row>
+         {selectedValue !== null && <Row>
+            <Col xs={{size: 12, offset: 1}}>
+              <Forecast 
+                selectedValue={selectedValue}
+              />
+            </Col>
+         </Row>}
+        </Container>
       </header>
     </div>
   );
