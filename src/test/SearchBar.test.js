@@ -18,4 +18,3 @@ it('Shows No option on clicking on search bar', async() => {
     });
     expect(await waitFor(() => getByText('Melbourne'))).toBeTruthy();
 })
-
