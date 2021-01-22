@@ -1,6 +1,6 @@
 # Getting Started with Weather-App
 
-The weather application is a react application using the open source metaweather API's
+## The weather application is a react application using the open source metaweather API's
 
 The third party packages used:
   # axios --- to send http request
