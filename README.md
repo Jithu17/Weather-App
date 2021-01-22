@@ -7,6 +7,7 @@
   ### reactstrap --- for UI components
 
 ## To start with:
+### clone this repository
 ### -- npm install
 ### -- npm start
 
