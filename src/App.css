@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.headerApp {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.searchApp {
+  margin-bottom: 2rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
