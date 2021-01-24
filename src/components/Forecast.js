@@ -8,6 +8,7 @@ const forecastApi = `https://cors-anywhere.herokuapp.com/https://www.metaweather
 const Forecast = (props) => {
 
     const [forecastData, setForecastData] = useState(null);
+    const [loading, setLoading] = useState(false);
     
     //Call the Api when location is selected
     useEffect(() => {
@@ -16,24 +17,21 @@ const Forecast = (props) => {
         }
     }, [props.selectedValue]);
 
-
     //function to call the api and set the state with the response
     const getForecast = async(woeid) => {
+        setLoading(true);
         const res = await axios.get(`${forecastApi}${woeid}`);
-        console.log(res.data);
         let filteredData = res.data.consolidated_weather.slice(0, 5);
         setForecastData(filteredData);
+        setLoading(false);
     }
 
     return (
         <>
-        {forecastData !== null && <Container>
+        {loading && <Row style={{ marginLeft: 350, fontWeight: 'bold', fontSize: 35}}>Loading Data</Row>}
+        {forecastData !== null && !loading && <Container>
              <Row>
-                {forecastData.map((tempData) => {
-                    return (
-                        <Temperature data={tempData} />
-                    )
-                })}
+                {forecastData.map((tempData) => <Temperature data={tempData} /> )}
             </Row>
         </Container>}
         </>

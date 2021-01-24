@@ -17,8 +17,8 @@ function App() {
     <div className="App">
       <header>
         <Container>
-          <div className="headerApp"><h1>Weather App</h1></div>
-          <Row className="searchApp">
+          <div className="HeaderApp"><h1>Weather App</h1></div>
+          <Row className="SearchApp">
             <Col xs={{size: 6, offset: 3}}>
               <SearchBar 
                 handleSelected={handleSelected}

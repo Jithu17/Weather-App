@@ -32,7 +32,6 @@ const SearchBar = (props) => {
         try{
             if(inputValue !== ''){
                 const res = await axios.get(`${searchApi}${inputValue}`);
-                console.log(res.data);
                 const result = res.data;
                 return result;
             }
